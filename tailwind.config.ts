@@ -1,4 +1,5 @@
 import { config } from "process";
+import { MouseEventHandler } from "react";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -35,3 +36,9 @@ module.exports = {
   plugins: [],
 };
 export default config;
+export interface CustomButtonProps {
+    title: string;
+    containerStyles?: string;
+    handleClick: MouseEventHandler<HTMLButtonElement>;
+    btnType?: "button" | "submit";
+}
